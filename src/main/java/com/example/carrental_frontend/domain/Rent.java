@@ -2,12 +2,12 @@ package com.example.carrental_frontend.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+
 
 @Data
 @AllArgsConstructor
@@ -43,5 +43,37 @@ public class Rent {
 
     @Column(name = "renting_status")
     private RentStatus rentStatus;
+
+    public Long getId() {
+        return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public LocalDate getStartRent() {
+        return startRent;
+    }
+
+    public LocalDate getEndRent() {
+        return endRent;
+    }
+
+    public BigDecimal getTotalCost() {
+        return totalCost;
+    }
+
+    public boolean isPaid() {
+        return isPaid;
+    }
+
+    public RentStatus getRentStatus() {
+        return rentStatus;
+    }
 
 }

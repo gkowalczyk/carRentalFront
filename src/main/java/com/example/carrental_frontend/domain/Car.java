@@ -1,15 +1,8 @@
 package com.example.carrental_frontend.domain;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(
@@ -25,42 +18,37 @@ import java.util.List;
 )
 
 
-@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
 @Entity()
-//@Table(name = "cars")
-//@builder
 
 public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "registration")
+
     private String registration;
 
-    @Column(name = "model")
+
     private String model;
 
-    @Column(name = "company")
+
     private String company;
 
-    @Column(name = "category")
+
     private String category;
 
-    @Column(name = "gearbox")
+
     private String gearBox;
 
-    @Column(name = "dailycost")
+
     private BigDecimal dailyCost;
 
-    @Column(name = "isAvailable")
+
     private boolean isAvailable;
 
-    @Column(name = "fuelconsumption")
+
     private BigDecimal fuelConsumption;
 
 
@@ -80,5 +68,97 @@ public class Car {
 
     private List<Rent> rentList;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getRegistration() {
+        return registration;
+    }
+
+    public void setRegistration(String registration) {
+        this.registration = registration;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getGearBox() {
+        return gearBox;
+    }
+
+    public void setGearBox(String gearBox) {
+        this.gearBox = gearBox;
+    }
+
+    public BigDecimal getDailyCost() {
+        return dailyCost;
+    }
+
+    public void setDailyCost(BigDecimal dailyCost) {
+        this.dailyCost = dailyCost;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
+    }
+
+    public BigDecimal getFuelConsumption() {
+        return fuelConsumption;
+    }
+
+    public void setFuelConsumption(BigDecimal fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public List<Equipment> getEquipmentList() {
+        return equipmentList;
+    }
+
+    public void setEquipmentList(List<Equipment> equipmentList) {
+        this.equipmentList = equipmentList;
+    }
+
+    public List<Rent> getRentList() {
+        return rentList;
+    }
+
+    public void setRentList(List<Rent> rentList) {
+        this.rentList = rentList;
+    }
+
+    public Long getId() {
+        return id;
+
 
     }
+
+
+    }
+
+

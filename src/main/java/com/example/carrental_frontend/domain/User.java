@@ -2,11 +2,9 @@ package com.example.carrental_frontend.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -51,5 +49,39 @@ public class User {
     )
     public List<Rent> rentList;
 
-
+    public Long getId() {
+        return id;
     }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public List<Rent> getRentList() {
+        return rentList;
+    }
+}

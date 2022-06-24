@@ -2,12 +2,12 @@ package com.example.carrental_frontend.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
+
 
 @Data
 @AllArgsConstructor
@@ -30,6 +30,22 @@ public class Equipment {
     @ManyToMany(mappedBy = "equipmentList")
     private List<Car> carList;
 
-
+    public Long getId() {
+        return id;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public List<Car> getCarList() {
+        return carList;
+    }
+
+}
+
 
