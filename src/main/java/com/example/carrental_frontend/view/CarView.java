@@ -27,8 +27,6 @@ public class CarView extends VerticalLayout {
     AddCarForm addCarForm;
 
 
-
-
     public CarView() {
 
         addClassName("car-view");

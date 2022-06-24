@@ -27,27 +27,19 @@ public class Car {
     @Column(name = "id")
     private Long id;
 
-
     private String registration;
-
 
     private String model;
 
-
     private String company;
-
 
     private String category;
 
-
     private String gearBox;
-
 
     private BigDecimal dailyCost;
 
-
     private boolean isAvailable;
-
 
     private BigDecimal fuelConsumption;
 
@@ -155,10 +147,7 @@ public class Car {
     public Long getId() {
         return id;
 
-
     }
-
-
-    }
+}
 
 
